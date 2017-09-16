@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- top -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:background="@color/colorOrange"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- cancel picking country -->
+        <TextView
+            android:id="@+id/text_country_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Cancel"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp" />
+
+        <!-- space -->
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+        <!-- done picking country -->
+        <TextView
+            android:id="@+id/text_country_done"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Done"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- current selected country -->
+    <TextView
+        android:id="@+id/text_current_country"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/colorOrange"
+        android:text="current country"
+        android:textSize="25sp"
+        android:textColor="@color/colorDarkGray"/>
+
+    <!-- list -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_list_countries"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

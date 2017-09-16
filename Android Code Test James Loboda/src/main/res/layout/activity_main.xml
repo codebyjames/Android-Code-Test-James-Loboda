@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="com.loboda.james.androidcodetestjamesloboda.MainActivity">
+
+    <!-- Contacts Screen -->
+    <LinearLayout
+        android:id="@+id/root_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <include layout="@layout/layout_contacts" />
+
+    </LinearLayout>
+
+    <!-- Contact Details Screen -->
+    <LinearLayout
+        android:id="@+id/root_contact_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_contact_details" />
+
+    </LinearLayout>
+
+    <!-- Edit Contact Screen -->
+    <LinearLayout
+        android:id="@+id/root_edit_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_edit_contact" />
+
+    </LinearLayout>
+
+    <!-- Countries Screen -->
+    <LinearLayout
+        android:id="@+id/root_countries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_countries" />
+
+    </LinearLayout>
+
+    <!-- Phone Labels Screen -->
+    <LinearLayout
+        android:id="@+id/root_phone_labels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_phone_labels" />
+
+    </LinearLayout>
+
+    <!-- Add Contact Screen -->
+    <LinearLayout
+        android:id="@+id/root_add_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_add_contact" />
+
+    </LinearLayout>
+
+</LinearLayout>

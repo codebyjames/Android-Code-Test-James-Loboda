@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorVeryLightGray"
+    android:orientation="vertical">
+
+    <!-- top -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:background="@color/colorOrange"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- cancel add -->
+        <TextView
+            android:id="@+id/text_edit_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Cancel"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp" />
+
+        <!-- space -->
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+        <!-- done add -->
+        <TextView
+            android:id="@+id/text_edit_done"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingRight="10dp"
+            android:text="Done"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <!-- name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorOrange"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <!-- first -->
+            <EditText
+                android:id="@+id/input_edit_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="first name"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:textSize="25sp" />
+
+            <!-- last -->
+            <EditText
+                android:id="@+id/input_edit_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="last name"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <!-- birthday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/colorLightGray"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <!-- title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="birthday"
+                android:textColor="@color/colorVeryLightGray"
+                android:textSize="20sp" />
+
+            <!-- month -->
+            <EditText
+                android:id="@+id/input_edit_birthday_month"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="month"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:textSize="20sp" />
+
+            <!-- divider -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.012"
+                android:alpha="0.2"
+                android:background="@color/colorDarkGray"
+                android:orientation="vertical" />
+
+            <!-- day -->
+            <EditText
+                android:id="@+id/input_edit_birthday_day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="day"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:textSize="20sp" />
+
+            <!-- divider -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.012"
+                android:alpha="0.2"
+                android:background="@color/colorDarkGray"
+                android:orientation="vertical" />
+
+            <!-- year -->
+            <EditText
+                android:id="@+id/input_edit_birthday_year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="year"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/colorDarkGray"
+                android:textColorHint="@color/colorVeryLightGray"
+                android:textSize="20sp" />
+
+            <!-- divider -->
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.012" />
+
+        </LinearLayout>
+
+        <!-- divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.012"
+            android:background="@color/colorLightGray"
+            android:orientation="vertical" />
+
+        <!-- lists -->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:fillViewport="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|top"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- phones -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- title/add phone -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- title -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center|left"
+                            android:padding="10dp"
+                            android:text="Phone Numbers"
+                            android:textColor="@color/colorLightGray"
+                            android:textSize="20sp" />
+
+                        <!-- add phone -->
+                        <ImageView
+                            android:id="@+id/button_edit_layout_add_phone"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_add_circle_white_48dp"
+                            android:tint="@color/colorLightGray" />
+
+                    </LinearLayout>
+
+                    <!-- list phones -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_list_edit_layout_phones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- emails -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- title/add email -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- title -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center|left"
+                            android:padding="10dp"
+                            android:text="Emails"
+                            android:textColor="@color/colorLightGray"
+                            android:textSize="20sp" />
+
+                        <!-- add email -->
+                        <ImageView
+                            android:id="@+id/button_edit_layout_add_email"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_add_circle_white_48dp"
+                            android:tint="@color/colorLightGray" />
+
+                    </LinearLayout>
+
+                    <!-- list emails -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_list_edit_layout_emails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- title/add address -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- title -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center|left"
+                            android:padding="10dp"
+                            android:text="Addresses"
+                            android:textColor="@color/colorLightGray"
+                            android:textSize="20sp" />
+
+                        <!-- add address -->
+                        <ImageView
+                            android:id="@+id/button_edit_layout_add_address"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_add_circle_white_48dp"
+                            android:tint="@color/colorLightGray" />
+
+                    </LinearLayout>
+
+                    <!-- list addresses -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_list_edit_layout_addresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

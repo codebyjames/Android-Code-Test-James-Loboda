@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorOrange</color>
+    <color name="colorPrimaryDark">@color/colorOrange</color>
+    <color name="colorAccent">@color/colorDarkGray</color>
+
+    <!-- Game -->
+    <color name="colorLightGray">#7b7b7b</color>
+    <color name="colorDarkGray">#FF282828</color>
+    <color name="colorMinorDarkGray">#3f3f3f</color>
+    <color name="colorVeryLightGray">#EAEAEA</color>
+    <color name="colorTintGray">#607D8B</color>
+
+    <color name="colorOrange">#ffff790c</color>
+    <color name="colorGreen">#3ea865</color>
+
+</resources>
