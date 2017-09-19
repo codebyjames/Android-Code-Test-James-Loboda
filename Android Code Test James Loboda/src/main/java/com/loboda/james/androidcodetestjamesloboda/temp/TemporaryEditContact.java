@@ -11,6 +11,7 @@ import com.loboda.james.androidcodetestjamesloboda.model.Phone;
 import com.loboda.james.androidcodetestjamesloboda.util.TrackContact;
 import com.loboda.james.androidcodetestjamesloboda.util.Util;
 import com.loboda.james.androidcodetestjamesloboda.views.Views;
+import com.loboda.james.androidcodetestjamesloboda.views.subviews.AddContactViews;
 import com.loboda.james.androidcodetestjamesloboda.views.subviews.EditContactViews;
 
 import java.util.ArrayList;
@@ -89,15 +90,17 @@ public class TemporaryEditContact {
 
         if (checkErrorInPhoneList()) {
             error = true;
+        } else if (checkErrorInEmailList()) {
+
+            error = true;
+
+        } else if (checkErrorBirthday()) {
+
+            error = true;
+
         } else {
 
-            //  check error in email because no error in phone list
-            if (checkErrorInEmailList()) {
-                error = true;
-            } else {
-                // no error found
-                error = false;
-            }
+            error = false;
 
         }
 
@@ -149,6 +152,45 @@ public class TemporaryEditContact {
             } else {
                 error = false;
             }
+
+        }
+
+        return error;
+
+    }
+
+    public static boolean checkErrorBirthday(){
+
+        boolean error = false;
+
+        String monthVal = EditContactViews.inputBirthdayMonth.getText().toString();
+        String dayVal = EditContactViews.inputBirthdayDay.getText().toString();
+        String yearVal = EditContactViews.inputBirthdayYear.getText().toString();
+
+
+        try {
+
+            int month, day, year;
+
+            month = Integer.parseInt(monthVal);
+            day = Integer.parseInt(dayVal);
+            year = Integer.parseInt(yearVal);
+
+            if (month > 12 || month == 0) {
+                error = true;
+                Util.showToastMessage("Month must be between 1 and 12");
+            } else if (day > 31 || day == 0) {
+                error = true;
+                Util.showToastMessage("Day must be between 1 and 31");
+            } else if (String.valueOf(year).length() < 4 || String.valueOf(year).length() > 4) {
+                error = true;
+                Util.showToastMessage("Year needs to 4 digits long");
+            }
+
+        } catch (Exception ex) {
+
+            error = false;
+            Util.showToastMessage("Birthday will not be saved if fields are empty");
 
         }
 

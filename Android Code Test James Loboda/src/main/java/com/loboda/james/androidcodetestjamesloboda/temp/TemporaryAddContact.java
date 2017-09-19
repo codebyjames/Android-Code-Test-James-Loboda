@@ -1,5 +1,7 @@
 package com.loboda.james.androidcodetestjamesloboda.temp;
 
+import android.util.Log;
+
 import com.loboda.james.androidcodetestjamesloboda.database.Database;
 import com.loboda.james.androidcodetestjamesloboda.helper.HelperPhoneLabels;
 import com.loboda.james.androidcodetestjamesloboda.model.Address;
@@ -123,15 +125,17 @@ public class TemporaryAddContact {
 
         if (checkErrorInPhoneList()) {
             error = true;
+        } else if (checkErrorInEmailList()) {
+
+            error = true;
+
+        } else if (checkErrorBirthday()) {
+
+            error = true;
+
         } else {
 
-            //  check error in email because no error in phone list
-            if (checkErrorInEmailList()) {
-                error = true;
-            } else {
-                // no error found
-                error = false;
-            }
+            error = false;
 
         }
 
@@ -190,6 +194,45 @@ public class TemporaryAddContact {
 
     }
 
+    public static boolean checkErrorBirthday(){
+
+        boolean error = false;
+
+        String monthVal = AddContactViews.inputBirthdayMonth.getText().toString();
+        String dayVal = AddContactViews.inputBirthdayDay.getText().toString();
+        String yearVal = AddContactViews.inputBirthdayYear.getText().toString();
+
+
+        try {
+
+            int month, day, year;
+
+            month = Integer.parseInt(monthVal);
+            day = Integer.parseInt(dayVal);
+            year = Integer.parseInt(yearVal);
+
+            if (month > 12 || month == 0) {
+                error = true;
+                Util.showToastMessage("Month must be between 1 and 12");
+            } else if (day > 31 || day == 0) {
+                error = true;
+                Util.showToastMessage("Day must be between 1 and 31");
+            } else if (String.valueOf(year).length() < 4 || String.valueOf(year).length() > 4) {
+                error = true;
+                Util.showToastMessage("Year needs to 4 digits long");
+            }
+
+        } catch (Exception ex) {
+
+            error = false;
+            Util.showToastMessage("Birthday will not be saved if fields are empty");
+
+        }
+
+        return error;
+
+    }
+
     public static void saveTempContact() {
 
         try {
@@ -206,8 +249,8 @@ public class TemporaryAddContact {
                     // update contact in DB
                     processSaveTempContactInDB();
 
-                    // go back to contact detail layout
-                    Views.showLayoutContactDetails();
+                    // go back to contact layout
+                    Views.showLayoutContacts();
                 }
 
             }
